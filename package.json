@@ -1,0 +1,22 @@
+{
+  "name": "qutm-portal-ui",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build --use neutrino-preset-react"
+  },
+  "devDependencies": {
+    "neutrino": "^7.0.2",
+    "neutrino-preset-react": "^7.0.2",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.9",
+    "@types/react-dom": "^16.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
