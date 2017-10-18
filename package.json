@@ -5,11 +5,12 @@
   "license": "MIT",
   "scripts": {
     "start": "neutrino start",
-    "build": "neutrino build --use neutrino-preset-react"
+    "build": "neutrino build"
   },
   "devDependencies": {
     "neutrino": "^7.0.2",
     "neutrino-preset-react": "^7.0.2",
+    "neutrino-preset-react-typescript": "^1.0.1",
     "tslint": "^5.7.0",
     "typescript": "^2.5.3"
   },
