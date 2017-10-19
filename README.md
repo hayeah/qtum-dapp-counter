@@ -19,6 +19,8 @@ PORT=3000 yarn start
 
 Open http://localhost:3000, and edit `src/index.tsx` for live-reload.
 
+For styling, edit `src/index.css`.
+
 # Other Tips
 
 Generating sourcemap may slow down project rebuilding. Webpack provide other sourcemap types that can speed up project building.
