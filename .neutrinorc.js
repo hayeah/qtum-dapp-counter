@@ -1,7 +1,22 @@
+const webpack = require("webpack")
 const reactTSPreset = require("neutrino-preset-react-typescript")
+const dappConfig = require("config")
 
 const customSourcemap = ({ config }) => {
   config.when(!!process.env.SOURCEMAP, config => config.devtool(process.env.SOURCEMAP))
+}
+
+const defineGlobals = ({ config }) => {
+  const globals = {}
+  Object.keys(dappConfig).map((key) => {
+    const val = dappConfig[key]
+    globals[key] = JSON.stringify(val, null, "  ")
+  })
+
+  // console.log("define plugin", webpack.DefinePlugin)
+
+  config.plugin("globals")
+    .use(webpack.DefinePlugin, [globals])
 }
 
 module.exports = (neutrino, opts = {}) => {
@@ -16,4 +31,6 @@ module.exports = (neutrino, opts = {}) => {
   })
 
   neutrino.use(customSourcemap)
+
+  neutrino.use(defineGlobals)
 }
