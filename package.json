@@ -8,11 +8,11 @@
     "build": "neutrino build"
   },
   "devDependencies": {
+    "config": "^1.28.0",
     "neutrino": "^7.0.2",
     "neutrino-preset-react": "^7.0.2",
     "neutrino-preset-react-typescript": "^1.0.1",
     "tslint": "^5.7.0",
-    "config": "^1.28.0",
     "typescript": "^2.5.3"
   },
   "dependencies": {
