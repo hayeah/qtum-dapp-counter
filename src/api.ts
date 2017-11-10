@@ -6,10 +6,10 @@ import {
 } from "qtumjs"
 
 const rpc = new QtumRPC(QTUM_RPC)
-const msgboard = new Contract(rpc, CONTRACTS.counter)
+const counter = new Contract(rpc, CONTRACTS.counter)
 
 export async function getCount(): Promise<number> {
-  const r = await msgboard.call("getCount")
+  const r = await counter.call("getCount")
   const [count] = r.outputs
 
   // count is a BN.js instance (big number)
@@ -22,7 +22,7 @@ interface IIncrementResult {
 }
 
 export async function increment(n: number): Promise<IIncrementResult> {
-  const r = await msgboard.send("increment", [n])
+  const r = await counter.send("increment", [n])
 
   // Expect exactly one log item, of type `CounterChanged(uint256 n)`;
   const log = r.logs[0]
