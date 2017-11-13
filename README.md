@@ -4,7 +4,7 @@ This hands-on tutorial will guide you through the process of developing a QTum D
 1. Run qtum's blockchain services in a docker container, in test mode.
 1. Generate initial coins for development.
 1. Deploy a Smart Contract.
-1. Interact with Smart Contract with RPC.
+1. Interact with Smart Contract using RPC.
 1. Interact with Smart Contract in the browser using `qtumjs`.
 1. Live-edit a DApp using Neutrino.js.
 
@@ -196,7 +196,7 @@ The deploy command takes 3 arguments:
 
 1. `contracts/Counter.sol` is the contract's source file.
 2. `counter` is the name we give to the contract.
-3. `'[1]'` is a JSON array of parameters send to the contract's constructor.
+3. `'[1]'` is a JSON array of parameters sent to the contract's constructor.
 
 We can check that the contract had been deployed:
 
@@ -363,8 +363,7 @@ qcli gettransaction \
       "abandoned": false
     }
   ],
-  "hex": "0200000001b69b1f906000fbc18cc2f07ae24261a21462d853e62f3e17b6cb4e252f853ceb010000006b483045022100e211675b40fc4a8fc69b4878669de436e937b81a77258b0fa7e3bb1b6394ef110220754308ae23157a497048f784125b7498c755f68f7eb6b31205af33393a2c2840012102a0fa0accd9e616fea7d31e71f99b0efb534c875cd48d4ced35909213b19214c2feffffff02c009ee9cd10100001976a914e9a1506597910382abf9
-6c47f24cf6856f1b15a088ac00000000000000004301040390d0030128247cf5dab00000000000000000000000000000000000000000000000000000000000000005149a2349a6a97e27a67c6887633f79384882cfaf02c2dd050000"
+  "hex": "0200000001b69b1f906000fbc18cc2f07ae24261a21462d853e62f3e17b6cb4e252f853ceb010000006b483045022100e211675b40fc4a8fc69b4878669de436e937b81a77258b0fa7e3bb1b6394ef110220754308ae23157a497048f784125b7498c755f68f7eb6b31205af33393a2c2840012102a0fa0accd9e616fea7d31e71f99b0efb534c875cd48d4ced35909213b19214c2feffffff02c009ee9cd10100001976a914e9a1506597910382abf96c47f24cf6856f1b15a088ac00000000000000004301040390d0030128247cf5dab00000000000000000000000000000000000000000000000000000000000000005149a2349a6a97e27a67c6887633f79384882cfaf02c2dd050000"
 }
 ```
 
@@ -547,7 +546,7 @@ And opening the authorization UI at http://localhost:9888, you should see an RPC
 
 ![](images/tx-pending-authorization.jpg)
 
-If the user click `Approve`, the client would then be able to make the same `sendtocontract` call again, and succeed.
+If the user clicks `Approve`, the client would then be able to make the same `sendtocontract` call again, and succeed.
 
 > For details of how RPC authorization works, see [QTUM Portal Authorization Design](https://github.com/hayeah/qtum-portal/blob/master/DESIGN.md). `qtumjs` handles authorization transparently, so you don't need to think about this in practice.
 
