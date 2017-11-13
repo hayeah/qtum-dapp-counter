@@ -9,6 +9,10 @@ const customSourcemap = ({ config }) => {
 const defineGlobals = ({ config }) => {
   const constants = appConfig.constants
 
+  if (!constants) {
+    return
+  }
+
   const globals = {}
 
   // JSON stringify all constants defined in config.constants.
