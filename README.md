@@ -88,7 +88,7 @@ Opening http://localhost:9899 in the browser, you should see the authorization U
 We can enter into the container by using the `docker exec` command:
 
 ```
-docker exec -it myapp bash
+docker exec -it myapp sh
 ```
 
 Once you are inside, try to make a RPC call using the `qcli` command:
